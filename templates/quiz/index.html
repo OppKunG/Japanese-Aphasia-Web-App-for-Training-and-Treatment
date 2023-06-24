@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <style>
+    {% comment %} html{
+      background: url(".././/static/image/Intro.png");  no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+        } {% endcomment %}
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: url(".././/static/image/Intro.png") no-repeat center center fixed;
+      {% comment %} -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; {% endcomment %}
+
+      }
+
+    .jumbotron {
+        margin-bottom: 0px;
+      }
+  </style>
+  <body>
+    {% include "quiz/navbar.html" %}
+    <br />
+    <section
+      id="section-jumbotron"
+      class="d-flex justify-content-center align-items-center"
+    >
+      <div class="container text-center">
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        {% comment %} <br />
+        <br />
+        <br />
+        <h1 class="display-1 text-info">Let's Quiz</h1>
+        <p class="display-4 d-none d-sm-block">Test your Aphasia score</p>
+        <p class="lead"></p>
+
+        <p class="lead">
+          Sign up if you haven't already and get access to quizzes on the topic
+          of your interest.
+        </p>
+        {% endcomment %}
+        <p style="color: white">
+          <strong> Start Your Journey Here:</strong>
+        </p>
+        <a
+          href="/patient/patientsignup"
+          class="btn btn-lg btn-info"
+          style="padding-right: 35px"
+          ><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a
+        >
+
+        <br /><br /><br />
+      </div>
+    </section>
+    {% include "quiz/footer.html" %}
+  </body>
+</html>
