@@ -7,7 +7,7 @@ class ContactusForm(forms.Form):
     Email = forms.EmailField()
     Message = forms.CharField(max_length=500,widget=forms.Textarea(attrs={'rows': 3, 'cols': 30}))
 
-class TherapistSalaryForm(forms.Form):
+class TeacherSalaryForm(forms.Form):
     salary=forms.IntegerField()
 
 class CourseForm(forms.ModelForm):

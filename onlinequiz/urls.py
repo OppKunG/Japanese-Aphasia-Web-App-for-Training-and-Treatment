@@ -5,8 +5,8 @@ from django.contrib.auth.views import LogoutView,LoginView
 urlpatterns = [
    
     path('admin/', admin.site.urls),
-    path('therapist/',include('therapist.urls')),
-    path('patient/',include('patient.urls')),
+    path('teacher/',include('teacher.urls')),
+    path('student/',include('student.urls')),
     
 
 
@@ -21,22 +21,22 @@ urlpatterns = [
     path('adminclick', views.adminclick_view),
     path('adminlogin', LoginView.as_view(template_name='quiz/adminlogin.html'),name='adminlogin'),
     path('admin-dashboard', views.admin_dashboard_view,name='admin-dashboard'),
-    path('admin-therapist', views.admin_therapist_view,name='admin-therapist'),
-    path('admin-view-therapist', views.admin_view_therapist_view,name='admin-view-therapist'),
-    path('update-therapist/<int:pk>', views.update_therapist_view,name='update-therapist'),
-    path('delete-therapist/<int:pk>', views.delete_therapist_view,name='delete-therapist'),
-    path('admin-view-pending-therapist', views.admin_view_pending_therapist_view,name='admin-view-pending-therapist'),
-    path('admin-view-therapist-salary', views.admin_view_therapist_salary_view,name='admin-view-therapist-salary'),
-    path('approve-therapist/<int:pk>', views.approve_therapist_view,name='approve-therapist'),
-    path('reject-therapist/<int:pk>', views.reject_therapist_view,name='reject-therapist'),
+    path('admin-teacher', views.admin_teacher_view,name='admin-teacher'),
+    path('admin-view-teacher', views.admin_view_teacher_view,name='admin-view-teacher'),
+    path('update-teacher/<int:pk>', views.update_teacher_view,name='update-teacher'),
+    path('delete-teacher/<int:pk>', views.delete_teacher_view,name='delete-teacher'),
+    path('admin-view-pending-teacher', views.admin_view_pending_teacher_view,name='admin-view-pending-teacher'),
+    path('admin-view-teacher-salary', views.admin_view_teacher_salary_view,name='admin-view-teacher-salary'),
+    path('approve-teacher/<int:pk>', views.approve_teacher_view,name='approve-teacher'),
+    path('reject-teacher/<int:pk>', views.reject_teacher_view,name='reject-teacher'),
 
-    path('admin-patient', views.admin_patient_view,name='admin-patient'),
-    path('admin-view-patient', views.admin_view_patient_view,name='admin-view-patient'),
-    path('admin-view-patient-marks', views.admin_view_patient_marks_view,name='admin-view-patient-marks'),
+    path('admin-student', views.admin_student_view,name='admin-student'),
+    path('admin-view-student', views.admin_view_student_view,name='admin-view-student'),
+    path('admin-view-student-marks', views.admin_view_student_marks_view,name='admin-view-student-marks'),
     path('admin-view-marks/<int:pk>', views.admin_view_marks_view,name='admin-view-marks'),
     path('admin-check-marks/<int:pk>', views.admin_check_marks_view,name='admin-check-marks'),
-    path('update-patient/<int:pk>', views.update_patient_view,name='update-patient'),
-    path('delete-patient/<int:pk>', views.delete_patient_view,name='delete-patient'),
+    path('update-student/<int:pk>', views.update_student_view,name='update-student'),
+    path('delete-student/<int:pk>', views.delete_student_view,name='delete-student'),
 
     path('admin-course', views.admin_course_view,name='admin-course'),
     path('admin-add-course', views.admin_add_course_view,name='admin-add-course'),

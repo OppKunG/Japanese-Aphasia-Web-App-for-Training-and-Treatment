@@ -31,11 +31,11 @@
       <thead>
         <tr>
 
-          <th>Course Name</th>
+          <th>Exam Name</th>
           
           <th>Total Marks</th>
-          <th>Attempt No.</th>
-          <th>Date</th>
+          <th>Attempt Number</th>
+          <th>Exam Date</th>
         </tr>
       </thead>
       {% for t in results %}
@@ -43,7 +43,7 @@
 
         <td> {{t.exam}}</td>
         <td> {{t.marks}}</td>
-        <td>Attempt {{ forloop.counter }}</td>
+        <td>Attemp {{ forloop.counter }}</td>
         <td> {{t.date}}</td>
         
         
