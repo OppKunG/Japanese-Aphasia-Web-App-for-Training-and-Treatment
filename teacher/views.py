@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required,user_passes_test
 from django.conf import settings
 from datetime import date, timedelta
 from quiz import models as QMODEL
-from student import models as SMODEL
+from patient import models as PMODEL
 from quiz import forms as QFORM
 
 
@@ -48,7 +48,7 @@ def teacher_dashboard_view(request):
     
     'total_course':QMODEL.Course.objects.all().count(),
     'total_question':QMODEL.Question.objects.all().count(),
-    'total_student':SMODEL.Student.objects.all().count()
+    'total_student':PMODEL.Patient.objects.all().count()
     }
     return render(request,'teacher/teacher_dashboard.html',context=dict)
 

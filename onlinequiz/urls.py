@@ -6,16 +6,14 @@ urlpatterns = [
    
     path('admin/', admin.site.urls),
     path('teacher/',include('teacher.urls')),
-    path('student/',include('student.urls')),
+    path('patient/',include('patient.urls')),
     
-
 
     path('',views.home_view,name=''),
     path('logout', LogoutView.as_view(template_name='quiz/logout.html'),name='logout'),
     path('aboutus', views.aboutus_view),
     path('contactus', views.contactus_view),
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
-
 
 
     path('adminclick', views.adminclick_view),
@@ -30,13 +28,13 @@ urlpatterns = [
     path('approve-teacher/<int:pk>', views.approve_teacher_view,name='approve-teacher'),
     path('reject-teacher/<int:pk>', views.reject_teacher_view,name='reject-teacher'),
 
-    path('admin-student', views.admin_student_view,name='admin-student'),
-    path('admin-view-student', views.admin_view_student_view,name='admin-view-student'),
-    path('admin-view-student-marks', views.admin_view_student_marks_view,name='admin-view-student-marks'),
+    path('admin-patient', views.admin_patient_view,name='admin-patient'),
+    path('admin-view-patient', views.admin_view_patient_view,name='admin-view-patient'),
+    path('admin-view-patient-marks', views.admin_view_patient_marks_view,name='admin-view-patient-marks'),
     path('admin-view-marks/<int:pk>', views.admin_view_marks_view,name='admin-view-marks'),
     path('admin-check-marks/<int:pk>', views.admin_check_marks_view,name='admin-check-marks'),
-    path('update-student/<int:pk>', views.update_student_view,name='update-student'),
-    path('delete-student/<int:pk>', views.delete_student_view,name='delete-student'),
+    path('update-patient/<int:pk>', views.update_patient_view,name='update-patient'),
+    path('delete-patient/<int:pk>', views.delete_patient_view,name='delete-patient'),
 
     path('admin-course', views.admin_course_view,name='admin-course'),
     path('admin-add-course', views.admin_add_course_view,name='admin-add-course'),

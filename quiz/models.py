@@ -1,6 +1,6 @@
 from django.db import models
+from patient.models import Patient
 
-from student.models import Student
 class Course(models.Model):
    course_name = models.CharField(max_length=50)
    question_number = models.PositiveIntegerField()
@@ -20,7 +20,7 @@ class Question(models.Model):
     answer=models.CharField(max_length=200,choices=cat)
 
 class Result(models.Model):
-    student = models.ForeignKey(Student,on_delete=models.CASCADE)
+    patient = models.ForeignKey(Patient,on_delete=models.CASCADE)
     exam = models.ForeignKey(Course,on_delete=models.CASCADE)
     marks = models.PositiveIntegerField()
     date = models.DateTimeField(auto_now=True)
