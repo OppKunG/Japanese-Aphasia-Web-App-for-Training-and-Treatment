@@ -52,7 +52,7 @@ def patient_course_view(request):
 
 @login_required(login_url='patientlogin')
 @user_passes_test(is_patient)
-def take_exam_view(request,pk):
+def take_course_view(request,pk):
     course=QMODEL.Course.objects.get(id=pk)
     total_questions=QMODEL.Question.objects.all().filter(course=course).count()
     questions=QMODEL.Question.objects.all().filter(course=course)
@@ -60,16 +60,16 @@ def take_exam_view(request,pk):
     for q in questions:
         total_marks=total_marks + q.marks
     
-    return render(request,'patient/take_exam.html',{'course':course,'total_questions':total_questions,'total_marks':total_marks})
+    return render(request,'patient/take_course.html',{'course':course,'total_questions':total_questions,'total_marks':total_marks})
 
 @login_required(login_url='patientlogin')
 @user_passes_test(is_patient)
-def start_exam_view(request,pk):
+def start_course_view(request,pk):
     course=QMODEL.Course.objects.get(id=pk)
     questions=QMODEL.Question.objects.all().filter(course=course)
     if request.method=='POST':
         pass
-    response= render(request,'patient/start_exam.html',{'course':course,'questions':questions})
+    response= render(request,'patient/start_course.html',{'course':course,'questions':questions})
     response.set_cookie('course_id',course.id)
     return response
 
@@ -92,7 +92,7 @@ def calculate_marks_view(request):
         patient = models.Patient.objects.get(user_id=request.user.id)
         result = QMODEL.Result()
         result.marks=total_marks
-        result.exam=course
+        result.course=course
         result.patient=patient
         result.save()
 
@@ -112,7 +112,7 @@ def view_result_view(request):
 def check_marks_view(request,pk):
     course=QMODEL.Course.objects.get(id=pk)
     patient = models.Patient.objects.get(user_id=request.user.id)
-    results= QMODEL.Result.objects.all().filter(exam=course).filter(patient=patient)
+    results= QMODEL.Result.objects.all().filter(course=course).filter(patient=patient)
     return render(request,'patient/check_marks.html',{'results':results})
 
 @login_required(login_url='patientlogin')

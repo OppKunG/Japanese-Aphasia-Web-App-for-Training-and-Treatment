@@ -1,4 +1,4 @@
-{% extends 'patient/patientbase.html' %}
+{% extends 'quiz/adminbase.html' %}
 {% block content %}
 {%load static%}
 
@@ -25,24 +25,28 @@
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">View Marks</h6>
+      <h6 class="panel-title">Therapists Salary</h6>
     </div>
     <table class="table table-hover" id="dev-table">
       <thead>
         <tr>
 
-          <th>Course Name</th>
+          <th>Name</th>
+          <th>Profile Picture</th>
+          <th>Mobile</th>
+          <th>Salary</th>
+         
           
-          <th>View Marks</th>
         </tr>
       </thead>
-      {% for t in courses %}
+      {% for t in therapists %}
       <tr>
 
-        <td> {{t.course_name}}</td>
-        
-        <td><a class="btn btn-danger btn-xs" href="{% url 'check-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
-      </tr>
+        <td> {{t.get_name}}</td>
+        <td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
+        <td>{{t.mobile}}</td>
+        <td>{{t.salary}}</td>
+        </tr>
       {% endfor %}
     </table>
   </div>

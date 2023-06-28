@@ -13,7 +13,7 @@ py manage.py createsuperuser
 - Can View And Delete Questions Too.
 
 ### Therapist
-- Apply for job in System. Then Login (Approval required by system admin, Then only teacher can login).
+- Apply for job in System. Then Login (Approval required by system admin, Then only therapist can login).
 - After Login, can see Total Number Of Patient, Course, Questions are there in system on Dashboard.
 - Can Add, View, Delete Course/Exams.
 - Can Add Questions To Respective Courses With Options, Correct Answer, And Marks.
@@ -40,6 +40,13 @@ python -m pip install -r requirements.txt
 py manage.py makemigrations
 py manage.py migrate
 py manage.py runserver
+```
+
+- If it has a database problem. (No such table)
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py migrate --run-syncdb
 ```
 - Now enter following URL in Your Browser Installed On Your Pc
 ```

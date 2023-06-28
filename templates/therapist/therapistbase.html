@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  
+ 
 
   <style media="screen">
     a:link {
@@ -78,7 +78,7 @@
     .sidebar h4 {
       color: #ccc;
       margin-top: 0;
-      margin-bottom: 20px;
+      
     }
 
     .sidebar a {
@@ -175,19 +175,15 @@
   <div class="sidebar">
     <center>
 
-      <img src="{% static "image/admin.png" %}" class="profile_image" alt="">
-      <h4>Admin</h4>
+      <img src="{% static "image/therapist.png" %}" class="profile_image" alt="">
+      <h4>{{request.user.first_name}}</h4>
+      <h6 style="color: rgb(255, 255, 255);">( Therapist )</h6>
 
     </center>
 
-    <a href="/admin-dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-    <a href="/admin-therapist"><i class="fas fa-user-md"></i><span>Therapist</span></a>
-    <a href="/admin-patient"><i class="fas fa-procedures"></i><span>Patient</span></a>
-    <a href="/admin-course"><i class="fas fa-book-medical"></i><span>Courses</span></a>
-    <a href="/admin-question"><i class="fas fa-question-circle"></i><span>Questions</span></a>
-    
-
-
+    <a href="/therapist/therapist-dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+    <a href="/therapist/therapist-course"><i class="fas fa-book-medical"></i><span>Courses</span></a>
+    <a href="/therapist/therapist-question"><i class="fas fa-question-circle"></i><span>Questions</span></a>
   </div>
   <!--sidebar end-->
 

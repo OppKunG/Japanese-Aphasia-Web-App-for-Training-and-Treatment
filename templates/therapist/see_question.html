@@ -1,4 +1,4 @@
-{% extends 'patient/patientbase.html' %}
+{% extends 'therapist/therapistbase.html' %}
 {% block content %}
 {%load static%}
 
@@ -25,23 +25,26 @@
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">View Marks</h6>
+      <h6 class="panel-title">Questions</h6>
     </div>
     <table class="table table-hover" id="dev-table">
       <thead>
         <tr>
 
-          <th>Course Name</th>
-          
-          <th>View Marks</th>
+          <th>Question</th>
+         
+          <th>Marks</th>
+          <th>Delete Question</th>
         </tr>
       </thead>
-      {% for t in courses %}
+      {% for c in questions %}
       <tr>
 
-        <td> {{t.course_name}}</td>
+        <td> {{c.question}}</td>
         
-        <td><a class="btn btn-danger btn-xs" href="{% url 'check-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        <td>{{c.marks}}</td>
+        <td><a class="btn btn-primary btn-xs" href="{% url 'remove-question' c.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+        
       </tr>
       {% endfor %}
     </table>

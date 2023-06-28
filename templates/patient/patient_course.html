@@ -41,7 +41,7 @@
 
         <td> {{t.course_name}}</td>
         
-        <td><a class="btn btn-danger btn-xs" href="{% url 'take-exam' t.id  %}"><span class="glyphicon glyphicon-circle-arrow-right"></span></a></td>
+        <td><a class="btn btn-danger btn-xs" href="{% url 'take-course' t.id  %}"><span class="glyphicon glyphicon-circle-arrow-right"></span></a></td>
       </tr>
       {% endfor %}
     </table>

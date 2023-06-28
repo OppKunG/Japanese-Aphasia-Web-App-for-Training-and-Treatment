@@ -5,7 +5,7 @@ from django.contrib.auth.views import LogoutView,LoginView
 urlpatterns = [
    
     path('admin/', admin.site.urls),
-    path('teacher/',include('teacher.urls')),
+    path('therapist/',include('therapist.urls')),
     path('patient/',include('patient.urls')),
     
 
@@ -19,14 +19,14 @@ urlpatterns = [
     path('adminclick', views.adminclick_view),
     path('adminlogin', LoginView.as_view(template_name='quiz/adminlogin.html'),name='adminlogin'),
     path('admin-dashboard', views.admin_dashboard_view,name='admin-dashboard'),
-    path('admin-teacher', views.admin_teacher_view,name='admin-teacher'),
-    path('admin-view-teacher', views.admin_view_teacher_view,name='admin-view-teacher'),
-    path('update-teacher/<int:pk>', views.update_teacher_view,name='update-teacher'),
-    path('delete-teacher/<int:pk>', views.delete_teacher_view,name='delete-teacher'),
-    path('admin-view-pending-teacher', views.admin_view_pending_teacher_view,name='admin-view-pending-teacher'),
-    path('admin-view-teacher-salary', views.admin_view_teacher_salary_view,name='admin-view-teacher-salary'),
-    path('approve-teacher/<int:pk>', views.approve_teacher_view,name='approve-teacher'),
-    path('reject-teacher/<int:pk>', views.reject_teacher_view,name='reject-teacher'),
+    path('admin-therapist', views.admin_therapist_view,name='admin-therapist'),
+    path('admin-view-therapist', views.admin_view_therapist_view,name='admin-view-therapist'),
+    path('update-therapist/<int:pk>', views.update_therapist_view,name='update-therapist'),
+    path('delete-therapist/<int:pk>', views.delete_therapist_view,name='delete-therapist'),
+    path('admin-view-pending-therapist', views.admin_view_pending_therapist_view,name='admin-view-pending-therapist'),
+    path('admin-view-therapist-salary', views.admin_view_therapist_salary_view,name='admin-view-therapist-salary'),
+    path('approve-therapist/<int:pk>', views.approve_therapist_view,name='approve-therapist'),
+    path('reject-therapist/<int:pk>', views.reject_therapist_view,name='reject-therapist'),
 
     path('admin-patient', views.admin_patient_view,name='admin-patient'),
     path('admin-view-patient', views.admin_view_patient_view,name='admin-view-patient'),

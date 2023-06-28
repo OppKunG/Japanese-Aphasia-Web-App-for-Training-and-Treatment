@@ -21,7 +21,7 @@ class Question(models.Model):
 
 class Result(models.Model):
     patient = models.ForeignKey(Patient,on_delete=models.CASCADE)
-    exam = models.ForeignKey(Course,on_delete=models.CASCADE)
+    course = models.ForeignKey(Course,on_delete=models.CASCADE)
     marks = models.PositiveIntegerField()
     date = models.DateTimeField(auto_now=True)
 
