@@ -1,12 +1,24 @@
 {% extends 'patient/patientbase.html' %}
 {% block content %}
-{%load static%}
+{% load static %}
 
 <head>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+  <style>
+    img {
+      border-radius: 8px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    img:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+    </style>
 
 </head>
 
@@ -18,6 +30,10 @@
     <h1 style="text-align: center;">{{course.course_name}}</h1>
     {% for q in questions%}
     <h3 class="text-info">{{ forloop.counter }}. {{q.question}}</h3><h4 style="text-align: right;">[Marks {{q.marks}}]</h4>
+    
+    <a href="{% static q.question_pic.url %}">
+      <img src="{% static q.question_pic.url %}" alt="Question Pic" height="250px" width="250px"/>
+    </a>
     
         <input type="hidden" name="csrfmiddlewaretoken" value="C24rUotmdHawVQJL3KrqiWxvti8UffOFYUc8TRbZtLt36AVLdP3jbkzUVe3beRAa">
         
@@ -80,6 +96,4 @@
 }
 
 </script> 
-
-<br><br><br><br><br><br>
 {% endblock content %}

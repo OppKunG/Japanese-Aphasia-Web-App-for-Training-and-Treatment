@@ -222,12 +222,12 @@ def admin_question_view(request):
 def admin_add_question_view(request):
     questionForm=forms.QuestionForm()
     if request.method=='POST':
-        questionForm=forms.QuestionForm(request.POST)
+        questionForm=forms.QuestionForm(request.POST,request.FILES)
         if questionForm.is_valid():
             question=questionForm.save(commit=False)
             course=models.Course.objects.get(id=request.POST.get('courseID'))
             question.course=course
-            question.save()       
+            question.save()
         else:
             print("form is invalid")
         return HttpResponseRedirect('/admin-view-question')

@@ -12,6 +12,7 @@ class Question(models.Model):
     course=models.ForeignKey(Course,on_delete=models.CASCADE)
     marks=models.PositiveIntegerField()
     question=models.CharField(max_length=600)
+    question_pic=models.ImageField(upload_to='question_pic/Course/',null=True,blank=True)
     option1=models.CharField(max_length=200)
     option2=models.CharField(max_length=200)
     option3=models.CharField(max_length=200)

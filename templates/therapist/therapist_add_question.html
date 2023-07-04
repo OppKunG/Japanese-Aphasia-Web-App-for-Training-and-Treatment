@@ -18,7 +18,7 @@
   </style>
 </head>
 <h2 style="text-align:center; color:blue;">ADD QUESTION</h2>
-<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;" enctype="multipart/form-data">
     {%csrf_token%}
     <div class="form-group">
         <label for="question">Course</label>
@@ -28,11 +28,14 @@
       <label for="question">Question</label>
       {% render_field questionForm.question|attr:'required:true' class="form-control" placeholder="What is the currency of Japan ?" %}
         <br>
+      <label for="question_pic">Question Picture</label>
+      {% render_field questionForm.question_pic|attr:'required:true' class="form-control" placeholder="" %}
+        <br>
       <label for="question_number">Marks</label>
       {% render_field questionForm.marks|attr:'required:true' class="form-control" placeholder="10" %}
         <br>
       <label for="option1">Option 1</label>
-      {% render_field questionForm.option1|attr:'required:true' class="form-control" placeholder="Rupees" %}
+      {% render_field questionForm.option1|attr:'required:true' class="form-control" placeholder="Baht" %}
         <br>
       <label for="option2">Option 2</label>
       {% render_field questionForm.option2|attr:'required:true' class="form-control" placeholder="Dollar" %}

@@ -91,12 +91,12 @@ def therapist_question_view(request):
 def therapist_add_question_view(request):
     questionForm=QFORM.QuestionForm()
     if request.method=='POST':
-        questionForm=QFORM.QuestionForm(request.POST)
+        questionForm=QFORM.QuestionForm(request.POST,request.FILES)
         if questionForm.is_valid():
             question=questionForm.save(commit=False)
             course=QMODEL.Course.objects.get(id=request.POST.get('courseID'))
             question.course=course
-            question.save()       
+            question.save()
         else:
             print("form is invalid")
         return HttpResponseRedirect('/therapist/therapist-view-question')
