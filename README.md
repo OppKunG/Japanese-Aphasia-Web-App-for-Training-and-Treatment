@@ -1,5 +1,5 @@
 # Japanese Aphasia Web App for Training and Treatment
-**Author**: Jakarin Chonchumrus &emsp; **Supervisor**: Dr. Mio Sakuma
+**Author**: Jakarin Chonchumrus &emsp;&emsp;&emsp;&emsp; **Supervisor**: Dr. Mio Sakuma
 
 
 ## Introduction
