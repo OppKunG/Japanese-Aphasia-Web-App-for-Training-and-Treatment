@@ -8,6 +8,7 @@ At present, various technologies have been invented and used in daily life. The 
 Web application or web app is software that runs in your web browser on every platform. It has many utilities such as recruiting jobs (LinkedIn), social media (Facebook and Instagram), file transfer or cloud services (Dropbox), and others. But there is a little bit of medical and increasing of elderly with Aphasia symptoms. Therefore, we should find a solution to this problem.
 The author created the Japanese Aphasia Web app for training and treatment. It is for treating Aphasia patients with testing and evaluation by Japanese speech therapists.
 
+
 ## Background
 [Aphasia symptoms][2] are a loss of language function, such as listening, speaking, reading, and writing. It is due to injury of the brain's language function area. It is one of the symptoms of higher brain function disorders caused by cerebrovascular disorders such as cerebral hemorrhage and cerebral infarction or traffic accidents and others.
 
@@ -38,13 +39,15 @@ The speech therapist designed questions for each patient. It is a multiple-choic
  <div align="center"><i>Figure 3: Example of question page</i></div>
 </p>
 
+
 ## Implementation
 JP Aphasia web using the Python language with Django framework and SQLite database
-The frontend part uses Hypertext Markup Language or HTML with [Django Widget Tweaks][6]. It is for decorating and adding features to your web page looks like Bootstrap CSS, but it is easier than CSS and suitable for using Django.
 
-The backend part uses [Python language][3] and [Django framework][1]. It has many systems as authentication for login or registering the account, authorization for separate roles to do each activity on the web, a management system for adding/updating/removing any data, and a dashboard system for displaying information. Programming technique uses functional components for making readable code and easy testing.
+- The frontend part uses Hypertext Markup Language or HTML with [Django Widget Tweaks][6]. It is for decorating and adding features to your web page looks like Bootstrap CSS, but it is easier than CSS and suitable for using Django.
 
-The database part uses [SQLite][4]. It is fast for R/W data and suitable for uncomplex databases. It keeps the personal data of the account after hashing method.
+- The backend part uses [Python language][3] and [Django framework][1]. It has many systems as authentication for login or registering the account, authorization for separate roles to do each activity on the web, a management system for adding/updating/removing any data, and a dashboard system for displaying information. Programming technique uses functional components for making readable code and easy testing.
+
+- The database part uses [SQLite][4]. It is fast for R/W data and suitable for uncomplex databases. It keeps the personal data of the account after hashing method.
 
 <p align="center">
  <img style="border-radius: 5px;" src="/static/screenshot/admin_page.png">
@@ -56,11 +59,14 @@ The database part uses [SQLite][4]. It is fast for R/W data and suitable for unc
  <div align="center"><i>Figure 5: Database page (Admin)</i></div>
 </p>
 
+
 ## Conclusion
 This project proposes a Japanese Aphasia Web App for Training and Treatment. The web uses a simple user interface with dashboards and icons using HTML with Django Widget Tweaks. The system has an authorization and authentication system for separating each activity as therapists, patients, and admin. It manages the treatment courses of Aphasia patients with a multiple-choice question created by the speech therapists using Python language with the Django framework and SQLite database for keeping the personal data of the account after hashing method.
 
+
 ## Acknowledgments
 The author was impressed by collaborating with Dr. Mio Sakuma and lab members in Dr. Sakuma's laboratory within the National Institute of Technology, Sendai College (SNCT) in Japan by the opportunity and scholarship of King Mongkut's Institute of Technology Ladkrabang (KMITL).
+
 
 ## References
 - Django Software Foundation, 2023, “Django documentation”, Retrieved Jun 2023, From https://docs.djangoproject.com/en/4.2/
@@ -69,7 +75,6 @@ The author was impressed by collaborating with Dr. Mio Sakuma and lab members in
 - SQLite Consortium, 2023, “SQLite”, Retrieved Jun 2023, From https://www.sqlite.org
 - Sumiko Sasanuma, 1993, “Aphasia Treatment in Japan”, Retrieved Jun 2023, From https://link.springer.com/chapter/10.1007/978-1-4899-7248-4_8
 - Vitor Freitas, 2015, “How to Use Django Widget Tweaks”, Retrieved Jun 2023, From https://simpleisbetterthancomplex.com/2015/12/04/package-of-the-week-django-widget-tweaks.html
-
 
 [1]: https://docs.djangoproject.com/en/4.2/ "“Django Documentation"
 [2]: https://www.mayoclinic.org/diseases-conditions/aphasia/symptoms-causes/syc-20369518 "Aphasia"
