@@ -25,7 +25,7 @@ The author designed a simple user interface for patients or therapists with dash
 This web app has different roles for authorization in this web app. The first role is the therapist. They can add courses and questions for their patient. Next, the patient can take a course and watch their marks for each quiz. Finally, the last role is admin can approve the therapist and access the database such as name, age, phone number, and therapist salary.
 
 <img style="border-radius: 5px;" src="/static/screenshot/therapist_page.png">
-<p style="text-align:center;"><i>Figure 2: Dashboard page (Therapist)</i></p>
+<div align="center"><i>Figure 2: Dashboard page (Therapist)</i></div>
  
 <img style="border-radius: 5px;" src="/static/screenshot/question_page.png">
 <p style="text-align:center;"><i>Figure 3: Example of question page</i></p>
