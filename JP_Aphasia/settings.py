@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CSRF_COOKIE_SECURE=False
-ROOT_URLCONF = 'onlinequiz.urls'
+ROOT_URLCONF = 'JP_Aphasia.urls'
 
 TEMPLATES = [
     {
@@ -61,7 +61,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'onlinequiz.wsgi.application'
+WSGI_APPLICATION = 'JP_Aphasia.wsgi.application'
 
 
 # Database
