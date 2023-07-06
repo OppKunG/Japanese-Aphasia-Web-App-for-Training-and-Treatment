@@ -16,52 +16,52 @@
     {% include "quiz/navbar.html" %}
 
 <br><br><br>
-<h3 style="text-align: center;color: red;">PATIENT SIGNUP</h3>
+<h3 style="text-align: center;color: red;">患者登録</h3>
 <form method="POST" autocomplete="off" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="username">Username</label>
-        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="username" %}
+        <label for="username">ユーザー名</label>
+        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="ユーザー名" %}
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
+        <label for="inputPassword4">パスワード</label>
+        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="パスワード" %}
       </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="first_name">First Name</label>
-          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+          <label for="first_name">名</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="名" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="last_name">Last Name</label>
-          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+          <label for="last_name">姓</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="姓" %}
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="age">Age</label>
-          {% render_field patientForm.age|attr:'required:true'  class="form-control" placeholder="Age" %}
+          <label for="age">歳</label>
+          {% render_field patientForm.age|attr:'required:true'  class="form-control" placeholder="歳" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="mobile">Mobile</label>
-          {% render_field patientForm.mobile|attr:'required:true'  class="form-control" placeholder="Mobile" %}
+          <label for="mobile">電話番号</label>
+          {% render_field patientForm.mobile|attr:'required:true'  class="form-control" placeholder="電話番号" %}
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-12">
-          <label for="profile_pic">Profile Picture</label>
+          <label for="profile_pic">プロフィールの写真</label>
           {% render_field patientForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
         </div>
         
       </div>
 
 
-    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <button type="submit" class="btn btn-primary">サインアップ</button>
   </form>
 
 

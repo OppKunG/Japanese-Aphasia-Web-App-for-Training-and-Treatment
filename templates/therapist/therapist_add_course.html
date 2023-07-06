@@ -17,22 +17,22 @@
     
   </style>
 </head>
-<h2 style="text-align:center; color:blue;">ADD COURSE</h2>
+<h2 style="text-align:center; color:blue;">コースを追加する</h2>
 <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
     {%csrf_token%}
     <div class="form-group">
-      <label for="course_name">Course Name</label>
+      <label for="course_name">コース名</label>
       {% render_field courseForm.course_name class="form-control" placeholder="Healthcare" %}
 
-      <label for="question_number">Total Question</label>
+      <label for="question_number">総質問数</label>
       {% render_field courseForm.question_number class="form-control" placeholder="10" %}
 
-      <label for="total_marks">Total Marks</label>
+      <label for="total_marks">合計点</label>
       {% render_field courseForm.total_marks class="form-control" placeholder="100" %}
     </div>
     
 
-    <button type="submit" class="btn btn-primary">ADD</button>
+    <button type="submit" class="btn btn-primary">追加</button>
   </form>
 <br><br><br>
 {% endblock content %}

@@ -2,9 +2,9 @@ from django import forms
 from . import models
 
 class ContactusForm(forms.Form):
-    Name = forms.CharField(max_length=30)
-    Email = forms.EmailField()
-    Message = forms.CharField(max_length=500,widget=forms.Textarea(attrs={'rows': 3, 'cols': 30}))
+    名前 = forms.CharField(max_length=30)
+    Eメール = forms.EmailField()
+    メッセージ = forms.CharField(max_length=500,widget=forms.Textarea(attrs={'rows': 3, 'cols': 30}))
 
 class TherapistSalaryForm(forms.Form):
     salary=forms.IntegerField()

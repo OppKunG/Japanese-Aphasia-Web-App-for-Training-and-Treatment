@@ -2,6 +2,7 @@
 {% load static %}
 <html lang="en" dir="ltr">
   <head>
+    <title>JP Aphasia</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -14,7 +15,7 @@
         margin-bottom: 0px;
       }
 
-      .jumbotron h1 {
+      .jumbotron h1,h2 {
         text-align: center;
       }
     </style>
@@ -24,19 +25,20 @@
     {% include "quiz/navbar.html" %}
     <br /><br />
     <div class="jumbotron" style="margin-bottom: 0px">
-      <h1 class="display-4">Hello, Patient</h1>
-      <p class="lead">Welcome to JP Aphasia</p>
+    <br><br>
+      <h1 class="display-4">こんにちは、患者。</h1>
+      <br>
+      <h2 class="lead">JP Aphasia へようこそ。</h2>
+      <br>
       <hr class="my-4" />
-      <p>You can access various features after Login.</p>
+      <p>ログイン後はさまざまな機能にアクセスできます。</p>
       <p class="lead">
         <a class="btn btn-primary btn-lg" href="patientsignup" role="button"
-          >Create Your Account</a
-        >
+          >アカウントを作成 ✍</a>
         <a class="btn btn-primary btn-lg" href="patientlogin" role="button"
-          >Login</a
-        >
+          >ログイン 🔐</a>
       </p>
-      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br><br><br><br><br><br><br>
     </div>
 
     {% include "quiz/footer.html" %}
