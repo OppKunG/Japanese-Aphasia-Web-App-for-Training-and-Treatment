@@ -12,9 +12,11 @@ The author created the Japanese Aphasia Web app for training and treatment. It i
 [Aphasia symptoms][2] are a loss of language function, such as listening, speaking, reading, and writing. It is due to injury of the brain's language function area. It is one of the symptoms of higher brain function disorders caused by cerebrovascular disorders such as cerebral hemorrhage and cerebral infarction or traffic accidents and others.
 
 [As the population ages in Japan, the number of Aphasia patients is increasing][5].
- 
-<img src="/static/screenshot/symptoms.png">
-<p style="text-align:center;"><i>Figure 1: Example of Aphasia symptoms</i></p>
+
+<p align="center">
+ <img src="/static/screenshot/symptoms.png">
+ <div align="center"><i>Figure 1: Example of Aphasia symptoms</i></div>
+</p>
 
 This web app testing and evaluation by speech therapists are professionals who identify the mechanisms of language disorders, evaluate eating and swallowing disorders, and provide training and support as needed.
 
@@ -24,13 +26,17 @@ The author designed a simple user interface for patients or therapists with dash
 
 This web app has different roles for authorization in this web app. The first role is the therapist. They can add courses and questions for their patient. Next, the patient can take a course and watch their marks for each quiz. Finally, the last role is admin can approve the therapist and access the database such as name, age, phone number, and therapist salary.
 
-<img style="border-radius: 5px;" src="/static/screenshot/therapist_page.png">
-<div align="center"><i>Figure 2: Dashboard page (Therapist)</i></div>
- 
-<img style="border-radius: 5px;" src="/static/screenshot/question_page.png">
-<p style="text-align:center;"><i>Figure 3: Example of question page</i></p>
+<p align="center">
+ <img style="border-radius: 5px;" src="/static/screenshot/therapist_page.png">
+ <div align="center"><i>Figure 2: Dashboard page (Therapist)</i></div><br>
+</p>
 
 The speech therapist designed questions for each patient. It is a multiple-choice test that is easy to answer and doesn't take long. 
+
+<p align="center">
+ <img style="border-radius: 5px;" src="/static/screenshot/question_page.png">
+ <div align="center"><i>Figure 3: Example of question page</i></div>
+</p>
 
 ## Implementation
 JP Aphasia web using the Python language with Django framework and SQLite database
@@ -39,12 +45,16 @@ The frontend part uses Hypertext Markup Language or HTML with [Django Widget Twe
 The backend part uses [Python language][3] and [Django framework][1]. It has many systems as authentication for login or registering the account, authorization for separate roles to do each activity on the web, a management system for adding/updating/removing any data, and a dashboard system for displaying information. Programming technique uses functional components for making readable code and easy testing.
 
 The database part uses [SQLite][4]. It is fast for R/W data and suitable for uncomplex databases. It keeps the personal data of the account after hashing method.
- 
-<img style="border-radius: 5px;" src="/static/screenshot/admin_page.png">
-<p style="text-align:center;"><i>Figure 4: Dashboard page (Admin)</i></p>
- 
-<img style="border-radius: 5px;" src="/static/screenshot/db_page.png">
-<p style="text-align:center;"><i>Figure 5: Database page (Admin)</i></p>
+
+<p align="center">
+ <img style="border-radius: 5px;" src="/static/screenshot/admin_page.png">
+ <div align="center"><i>Figure 4: Dashboard page (Admin)</i></div>
+</p>
+
+<p align="center">
+ <img style="border-radius: 5px;" src="/static/screenshot/db_page.png">
+ <div align="center"><i>Figure 5: Database page (Admin)</i></div>
+</p>
 
 ## Conclusion
 This project proposes a Japanese Aphasia Web App for Training and Treatment. The web uses a simple user interface with dashboards and icons using HTML with Django Widget Tweaks. The system has an authorization and authentication system for separating each activity as therapists, patients, and admin. It manages the treatment courses of Aphasia patients with a multiple-choice question created by the speech therapists using Python language with the Django framework and SQLite database for keeping the personal data of the account after hashing method.
