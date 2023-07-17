@@ -76,7 +76,7 @@ The author was impressed by collaborating with Dr. Mio Sakuma and lab members in
 - Sumiko Sasanuma, 1993, “Aphasia Treatment in Japan”, Retrieved Jun 2023, From https://link.springer.com/chapter/10.1007/978-1-4899-7248-4_8
 - Vitor Freitas, 2015, “How to Use Django Widget Tweaks”, Retrieved Jun 2023, From https://simpleisbetterthancomplex.com/2015/12/04/package-of-the-week-django-widget-tweaks.html
 
-[1]: https://docs.djangoproject.com/en/4.2/ "“Django Documentation"
+[1]: https://docs.djangoproject.com/en/4.2/ "Django Documentation"
 [2]: https://www.mayoclinic.org/diseases-conditions/aphasia/symptoms-causes/syc-20369518 "Aphasia"
 [3]: https://docs.python.org/3/ "Python Documentation"
 [4]: https://www.sqlite.org "SQLite"
