@@ -1,0 +1,12 @@
+what is this? これは何ですか？
+
+bear 熊（くま）/
+cat 猫（ねこ）/
+cow 牛（うし）/
+dog 犬（いぬ）/
+elephant 象（ぞう）/
+horse 馬（うま）/
+mouse 鼠（ねずみ）/
+rabbit 兎（うさぎ）/
+sheep 羊（ひつじ）/
+whale 鯨（くじら）/
